@@ -7,7 +7,7 @@ import { sequelize } from "./models";
 /**
  *  App Variables 
  */
-const PORT:number = parseInt(process.env.PORT as string, 10);
+const PORT:number = parseInt(process.env.SERVER_PORT as string, 10);
 const HOST:string = process.env.HOST || 'localhost';
 const app: express.Application = express();
 // app.set("port", PORT);
