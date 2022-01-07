@@ -1,9 +1,7 @@
-"use strict";
+import { Sequelize } from 'sequelize';
+import config from '../config/config';
 
-import { Sequelize } from "sequelize";
-import config from "../config/config.js";
-
-const env = process.env.NODE_ENV || "development";
+const env = process.env.NODE_ENV || 'development';
 const dbConfig = config[env];
 const db = {};
 
@@ -11,7 +9,7 @@ const sequelize = new Sequelize(
   dbConfig.database,
   dbConfig.username,
   dbConfig.password,
-  dbConfig
+  dbConfig,
 );
 
 db.sequelize = sequelize;

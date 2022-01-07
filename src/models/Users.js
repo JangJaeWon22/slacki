@@ -1,10 +1,10 @@
-import Sequelize from "sequelize";
+import Sequelize from 'sequelize';
 // import db from "../db.js";
-import db from "./index.js";
+import db from './index';
 // 여기는 좀 노답.....
 
-const sequelize = db.sequelize;
-const User = sequelize.define("User", {
+const { sequelize } = db;
+const User = sequelize.define('User', {
   userId: {
     defaultValue: Sequelize.UUIDV4,
     type: Sequelize.UUID,
