@@ -1,29 +1,29 @@
-import Sequelize from 'sequelize';
-// import db from "../db.js";
-import db from './index';
-// 여기는 좀 노답.....
+// import Sequelize from 'sequelize';
+// // import db from "../db.js";
+// import db from './index';
+// // 여기는 좀 노답.....
 
-const { sequelize } = db;
-const User = sequelize.define('User', {
-  userId: {
-    defaultValue: Sequelize.UUIDV4,
-    type: Sequelize.UUID,
-    primaryKey: true,
-    allowNull: false,
-    // autoIncrement: true,
-  },
-  name: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  email: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  password: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-});
+// const { sequelize } = db;
+// const User = sequelize.define('User', {
+//   userId: {
+//     defaultValue: Sequelize.UUIDV4,
+//     type: Sequelize.UUID,
+//     primaryKey: true,
+//     allowNull: false,
+//     // autoIncrement: true,
+//   },
+//   name: {
+//     type: Sequelize.STRING,
+//     allowNull: false,
+//   },
+//   email: {
+//     type: Sequelize.STRING,
+//     allowNull: false,
+//   },
+//   password: {
+//     type: Sequelize.STRING,
+//     allowNull: false,
+//   },
+// });
 
-export default User;
+// export default User;

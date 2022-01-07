@@ -8,6 +8,7 @@ const PORT = process.env.SERVER_PORT;
 const app = express();
 // app.set("port", PORT);
 // req json 형식 받을 수 있게 만들어줌
+app.use(express.static('public'));
 app.use(express.json());
 
 db.sequelize
