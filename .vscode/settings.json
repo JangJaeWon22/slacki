@@ -3,8 +3,4 @@
     "source.fixAll.eslint": true,
   },
   "editor.formatOnSave": false,
-  "[javascript]": {
-    // "beautify.enable": false,
-    "editor.formatOnSave": false,
-  }
 }
