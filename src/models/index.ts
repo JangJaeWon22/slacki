@@ -1,15 +1,18 @@
 import { Sequelize } from 'sequelize';
-import config from '../config/config.js';
+import  config  from '../config/config';
 
 const env = process.env.NODE_ENV || 'development';
 const dbConfig = config[env];
 const db = {};
 
-const sequelize = new Sequelize(
-  dbConfig.database,
-  dbConfig.username,
-  dbConfig.password,
-  dbConfig,
+export default new Sequelize(
+  config.development.database,
+  config.development.username,
+  config.development.password,
+  {
+    host: config.development.host,
+    dialect: 'mysql',
+  },
 );
 
 db.sequelize = sequelize;
