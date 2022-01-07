@@ -35,7 +35,7 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-export const config = {
+export default {
   development: {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,

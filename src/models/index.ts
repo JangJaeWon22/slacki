@@ -1,16 +1,18 @@
 import { Sequelize } from 'sequelize';
-import { config } from '../config/config';
+import config from '../config/config.js';
 
-// const env = process.env.NODE_ENV || 'development';
-// const dbConfig = config[env];
-// const db = {};
+const env = process.env.NODE_ENV || 'development';
+const dbConfig = config[env];
+const db = {};
 
-export const sequelize = new Sequelize(
-  config.development.database,
-  config.development.username,
-  config.development.password,
-  {
-    host: config.development.host,
-    dialect: 'mysql',
-  },
+const sequelize = new Sequelize(
+  dbConfig.database,
+  dbConfig.username,
+  dbConfig.password,
+  dbConfig,
 );
+
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+export default db;
