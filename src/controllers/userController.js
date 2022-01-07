@@ -1,4 +1,5 @@
 import User from "../models/Users.js";
+// express에서 Request, Response 타입을 가져오면 됨
 
 //회원가입
 export const postUsers = async (req, res) => {
