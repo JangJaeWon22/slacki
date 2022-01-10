@@ -28,7 +28,7 @@ module.exports = {
     "no-console": "off",
     'prettier/prettier': 'error',
     'import/prefer-default-export': 'off',
-    "no-unused-vars": "off",
+    // "no-unused-vars": "off",
     // 'import/no-default-export': 'error',
     'import/extensions':'off'
   },

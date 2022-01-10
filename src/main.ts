@@ -5,6 +5,6 @@ function hello() {
 
 hello()
 
-const abc = 0
+const inteee = 0
 
 console.log()
