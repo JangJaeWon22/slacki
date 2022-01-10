@@ -23,7 +23,7 @@ module.exports = {
     'prettier',
     'import',
   ],
-  ignorePatterns: ['.eslintrc.js'],
+  // ignorePatterns: ['.eslintrc.js'],
   rules: {
     "no-console": "off",
     'prettier/prettier': 'error',
