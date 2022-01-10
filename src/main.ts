@@ -4,3 +4,5 @@ function hello() {
 }
 
 hello()
+
+const abc = 0
