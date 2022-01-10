@@ -1,34 +1,43 @@
-// .eslintrc.js
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  env: {
+    browser: true,
+    es2021: true,
+  },
   extends: [
-    // Airbnb style guide 적용
-    "airbnb-base",
-    "airbnb-typescript/base",
-    'plugin:node/recommended',
+    'airbnb-base', 
+    'airbnb-typescript/base', 
+    'plugin:@typescript-eslint/recommended', 
+    'plugin:eslint-comments/recommended', 
+    'plugin:jest/recommended', 
+    'plugin:promise/recommended', 
     'prettier',
-    // TypeScript ESLint recommanded style 적용
-    // 'plugin:@typescript-eslint/eslint-recommended',
   ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: "./tsconfig.json",
+    tsconfigRootDir: __dirname,
+    sourceType: "module",
+  },
+  plugins: [
+    '@typescript-eslint',
+    'prettier',
+    'import',
+  ],
+  ignorePatterns: ['.eslintrc.js'],
   rules: {
-    // ESLint 기본적으로 console 허용 안 함.
-    "no-console": "error",
-    "import/prefer-default-export": "off",
-    "unicorn/no-array-reduce": "off",
-    "@typescript-eslint/no-var-requires": "off",
-    "node/no-unsupported-features/es-syntax": [
-      "error",
-      { ignores: ["modules"] },
-    ],
-    'import/no-unresolved': [
-      'error',
-      { "caseSensitive": false }
-    ],  
+    "no-console": "off",
+    'prettier/prettier': 'error',
+    'import/prefer-default-export': 'off',
+    "no-unused-vars": "off",
+    // 'import/no-default-export': 'error',
+    'import/extensions':'off'
   },
-  settings: {
+  "settings": {
     "import/resolver": {
-      typescript: {} // this loads <rootdir>/tsconfig.json to eslint
-    },
-  },
+      "typescript": {
+          "alwaysTryTypes": true,
+          "project": "./tsconfig.json"
+      }
+    }
+  }
 };

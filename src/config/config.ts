@@ -31,9 +31,9 @@
 //   },
 // };
 
-import * as dotenv from 'dotenv';
+import * as dotenv from 'dotenv'
 
-dotenv.config();
+dotenv.config()
 
 export default {
   development: {
@@ -43,4 +43,4 @@ export default {
     host: process.env.DB_HOST,
     dialect: 'mysql',
   },
-};
+}
