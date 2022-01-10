@@ -4,7 +4,3 @@ function hello() {
 }
 
 hello()
-
-const inteee = 0
-
-console.log()
