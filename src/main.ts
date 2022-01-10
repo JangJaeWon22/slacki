@@ -6,3 +6,5 @@ function hello() {
 hello()
 
 const abc = 0
+
+console.log()

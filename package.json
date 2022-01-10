@@ -24,7 +24,7 @@
   "homepage": "https://github.com/JangJaeWon22/slacki#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
+      "pre-commit": "lint-staged",
       "pre-push": "npm test"
     }
   },
