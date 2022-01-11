@@ -5,7 +5,7 @@ import config from '../config/config'
 // const dbConfig = config[env]
 // const db = {}
 
-export const sequelize = new Sequelize(
+export default new Sequelize(
   config.development.database,
   config.development.username,
   config.development.password,
