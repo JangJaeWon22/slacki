@@ -42,6 +42,6 @@ app.listen(PORT, HOST, async () => {
       return null
     })
     .catch(e => {
-      console.log('TT : ', e)
+      console.log('error: ', e)
     })
 })
